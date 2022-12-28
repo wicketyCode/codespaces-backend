@@ -1,0 +1,26 @@
+{
+  "name": "codespaces-backend",
+  "version": "1.0.0",
+  "description": "\"# codespaces-backend\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wicketyCode/codespaces-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wicketyCode/codespaces-backend/issues"
+  },
+  "homepage": "https://github.com/wicketyCode/codespaces-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "uuid": "^9.0.0"
+  }
+}
