@@ -4,7 +4,7 @@
   "description": "\"# codespaces-backend\"",
   "main": "build/server.js",
   "scripts": {
-    "start": "node src/server.ts",
+    "start": "node build/server.js",
     "build": "tsc"
   },
   "repository": {
