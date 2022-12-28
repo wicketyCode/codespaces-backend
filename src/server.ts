@@ -1,16 +1,23 @@
 import express, { Request, Response } from 'express';
 import proxy from './proxy';
-import products from "./products/products";
+import products from "./products/Products";
+import productDetails from "./productDetails/ProductDetails";
 
 const app = express();
 app.use(express.json());
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!');
-});
-
 app.get('/products', (req: Request, res: Response) => {
   res.json(products);
+});
+
+app.get('/products/details/:id', (req: Request, res: Response) => {
+  const id = req.params.id;
+  const product = productDetails.find(product => product.id === parseInt(id));
+  if (product) {
+    res.json(product);
+  } else {
+    res.status(404).json({ error: 'Product not found' });
+  }
 });
 
 app.listen(4000, () => {
