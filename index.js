@@ -1,12 +1,12 @@
-const fs = require('fs/promises');
-const express = require('express');
-const cors = require('cors');
+/*const cors = require('cors');
 const _ = require('lodash');
 const {v4: uuid} = require('uuid');
-
-
+const fs = require('fs/promises');*/
+const express = require('express');
+const proxy = require('./proxy');
 
 const app = express();
+app.use(express.json());
 
 const products = [
     {
@@ -42,3 +42,6 @@ app.get('/products', (req, res) => {
 app.listen(4000, () => {
     console.log('Server listening on port 4000');
 });
+
+
+proxy(app);
